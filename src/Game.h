@@ -18,8 +18,6 @@ class Game {
       void loop(void);
 
       void play_InitGame();
-      void play_NoSelection();
-      void play_NodeSelected();
       void renderBoard();
       void play_DisplayBoard();
 
@@ -39,8 +37,6 @@ class Game {
       byte leftValue(byte val);
       byte rightValue(byte val);
       byte getNodeValue(byte x, byte y);
-      byte getNumberOfPuzzles(byte puzzleLevel);
-      byte calculateTopRow();
 
       void initBoard(byte puzzleNumber);
       bool isNode(byte x, byte y);
@@ -48,7 +44,7 @@ class Game {
 
     private:
 
-      const byte* nodes[11] = { 0, Node1, Node2, Node3, Node4, Node5, Node6, Node7, Node8, Node9, Node10 };
+      const byte* nodes[11] = { nullptr, Node1, Node2, Node3, Node4, Node5, Node6, Node7, Node8, Node9, Node10 };
       byte board[5][5];
       byte gameState = STATE_SPLASH_INIT;
       byte splash_counter;

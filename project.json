@@ -916,6 +916,27 @@
 		},
 		"/Pipes_Article1_Pokitto.bin": {
 			"sdcard": false
+		},
+		"/Pipes_Article1_Body.docx": {
+			"sdcard": false
+		},
+		"/Pipes_Article1_Callouts.docx": {
+			"sdcard": false
+		},
+		"/~$pes_Article1_Body.docx": {
+			"sdcard": false
+		},
+		"/~$pes_Article1_Callouts.docx": {
+			"sdcard": false
+		},
+		"/documents": {
+			"sdcard": false
+		},
+		"/documents/Pipes_Article1_Callouts.docx": {
+			"sdcard": false
+		},
+		"/documents/Pipes_Article1_Body.docx": {
+			"sdcard": false
 		}
 	}
 }
