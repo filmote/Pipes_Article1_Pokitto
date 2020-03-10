@@ -11,9 +11,9 @@ Game game;
 int main() {
 
     PC::begin();
-//    PD::persistence = true;
     PD::setInvisibleColor(0);
     PD::setColor(0);
+    PD::loadRGBPalette(paletteCGA); 
 
 
     // Play game!
