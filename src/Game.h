@@ -34,19 +34,19 @@ class Game {
 
       // Utilities ..
 
-      byte leftValue(byte val);
-      byte rightValue(byte val);
-      byte getNodeValue(byte x, byte y);
+      uint8_t leftValue(uint8_t val);
+      uint8_t rightValue(uint8_t val);
+      uint8_t getNodeValue(uint8_t x, uint8_t y);
 
-      void initBoard(byte puzzleNumber);
-      bool isNode(byte x, byte y);
+      void initBoard(uint8_t puzzleNumber);
+      bool isNode(uint8_t x, uint8_t y);
 
 
     private:
 
-      const byte* nodes[11] = { nullptr, Node1, Node2, Node3, Node4, Node5, Node6, Node7, Node8, Node9, Node10 };
-      byte board[5][5];
-      byte gameState = STATE_SPLASH_INIT;
-      byte splash_counter;
+      const uint8_t* nodes[11] = { nullptr, Node1, Node2, Node3, Node4, Node5, Node6, Node7, Node8, Node9, Node10 };
+      uint8_t board[5][5];
+      uint8_t gameState = STATE_SPLASH_INIT;
+      uint8_t splash_counter;
 
 };

@@ -1,9 +1,9 @@
 #pragma once
 
 
-const byte puzzles_5x5_count = 2;
+const uint8_t puzzles_5x5_count = 2;
 
-const byte puzzles_5x5[] = {
+const uint8_t puzzles_5x5[] = {
 
   0x10, 0x20, 0x40,
   0x00, 0x30, 0x50,

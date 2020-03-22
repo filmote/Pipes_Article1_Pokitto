@@ -8,7 +8,7 @@ using PS = Pokitto::Sound;
 /* ----------------------------------------------------------------------------
  *  Return the upper 4 bits of a byte.
  */
-byte Game::leftValue(byte val) {
+uint8_t Game::leftValue(uint8_t val) {
 
   return val >> 4; 
       
@@ -18,7 +18,7 @@ byte Game::leftValue(byte val) {
 /* ----------------------------------------------------------------------------
  *  Return the lower 4 bits of a byte.
  */
-byte Game::rightValue(byte val) {
+uint8_t Game::rightValue(uint8_t val) {
 
   return val & 0x0F; 
       
@@ -28,15 +28,15 @@ byte Game::rightValue(byte val) {
 /* ----------------------------------------------------------------------------
  *  Initialise the board.
  */
-void Game::initBoard(byte puzzleNumber) {
+void Game::initBoard(uint8_t puzzleNumber) {
 
-  byte x = 0;
-  byte y = 0;
-  byte byteRead = 0;
+  uint8_t x = 0;
+  uint8_t y = 0;
+  uint8_t byteRead = 0;
 
   for (int i = (puzzleNumber * 15); i < (puzzleNumber + 1) * 15; i++) {
 
-  	byteRead = pgm_read_byte(&puzzles_5x5[i]);
+  	byteRead = puzzles_5x5[i];
 
   
     // Load up the left hand value ..
@@ -70,7 +70,7 @@ void Game::initBoard(byte puzzleNumber) {
 /* ----------------------------------------------------------------------------
  *  Is the position nominated a node?
  */
-bool Game::isNode(byte x, byte y) {
+bool Game::isNode(uint8_t x, uint8_t y) {
 
   return (board[y][x] & 0xF0) == 0xF0;
   
@@ -80,7 +80,7 @@ bool Game::isNode(byte x, byte y) {
 /* ----------------------------------------------------------------------------
  *  Get the node value for the position.
  */
-byte Game::getNodeValue(byte x, byte y) {
+uint8_t Game::getNodeValue(uint8_t x, uint8_t y) {
   
   return (board[y][x] & 0x0F);
 
