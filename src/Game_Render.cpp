@@ -79,9 +79,9 @@ void Game::renderBoard() {
 
   // Draw placed nodes ..
   
-  for (int y = 0; y < PUZZLE_Y; y++) {
+  for (uint8_t y = 0; y < PUZZLE_Y; y++) {
       
-    for (int x = 0; x < PUZZLE_X; x++) {
+    for (uint8_t x = 0; x < PUZZLE_X; x++) {
       
       if (isNode(x, y)) {
         
@@ -96,9 +96,9 @@ void Game::renderBoard() {
   
   // Draw grid marks ..
   
-  for (int y = 0; y <= PUZZLE_Y; y++) {
+  for (uint8_t y = 0; y <= PUZZLE_Y; y++) {
       
-    for (int x = 0; x <= PUZZLE_X; x++) {
+    for (uint8_t x = 0; x <= PUZZLE_X; x++) {
               
       PD::drawPixel((x * GRID_WIDTH), (y * GRID_HEIGHT), 9);
       
